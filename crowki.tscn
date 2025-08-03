@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0ofs80e2qe07"]
+
+[ext_resource type="Texture2D" uid="uid://d1h0hjrsmtr2s" path="res://Images/Crowki.png" id="1_h3076"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imh4q"]
+
+[node name="Crowki" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h3076")
+
+[node name="Area2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
+scale = Vector2(6.44, 6.36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_imh4q")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://xvu26y5i7xky"]
+
+[ext_resource type="Script" uid="uid://krpc6lt1btsk" path="res://comboScriptl.gd" id="1_ixruh"]
+
+[node name="ComboScore" type="Node2D"]
+script = ExtResource("1_ixruh")
+
+[node name="ComboLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

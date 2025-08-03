@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://hyo16tktxlkl"]
+
+[ext_resource type="Texture2D" uid="uid://ccec1ep0efg8a" path="res://Images/tomatoDoki.png" id="1_ausxj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sls2w"]
+
+[node name="TomatoDoki" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ausxj")
+
+[node name="Area2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
+scale = Vector2(6.64, 6.44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sls2w")

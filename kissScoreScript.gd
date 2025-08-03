@@ -1,0 +1,49 @@
+extends Label
+
+var score: int = 0
+var base_score: int = 1
+var combo: int = 0
+var combo_timer: float = 0.0
+var combo_reset_time: = 2.0
+var ComboPopup = preload("res://combo_score.tscn")
+
+func _ready():
+	update_score()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		var mouse_pos = get_viewport().get_mouse_position()
+		var space_state = get_world_2d().direct_space_state
+		
+		var query = PhysicsPointQueryParameters2D.new()
+		query.position = mouse_pos
+		query.collide_with_areas = true
+		query.collide_with_bodies = true
+		
+		var results = space_state.intersect_point(query, 32) #hard number 32 allows upto 32 resualts in query
+		
+		for result in results:
+			var node = result["collider"]
+			if node.is_in_group("KissScoreGroup"):
+				if combo_timer <= combo_reset_time:
+					combo +=1
+				else:
+					combo = 1
+				combo_timer = 0.0
+				var popup =ComboPopup.instantiate()
+				get_tree().current_scene.add_child(popup)
+				popup.global_position = mouse_pos
+				popup.setup(combo)
+				var calulated_score = base_score * combo
+				score += calulated_score
+				update_score()
+				break
+
+func update_score() -> void:
+	text = "Kiss Score: %d Combo: %d  " % [score, combo]
+	
+func _process(delta: float) -> void:
+	combo_timer += delta
+	if combo_timer > combo_reset_time and combo != 0:
+		combo =0
+		update_score()
