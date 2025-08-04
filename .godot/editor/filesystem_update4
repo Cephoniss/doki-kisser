@@ -1,5 +1,7 @@
-res://game_space.tscn
 res://tomato_doki.tscn
+res://kissTarget.gd
+res://game_space.tscn
 res://crowki.tscn
 res://doki_heart.tscn
 res://combo_score.tscn
+res://doki_spawner.gd
