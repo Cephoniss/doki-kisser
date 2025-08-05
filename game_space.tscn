@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://coovnkllwwngj"]
+[gd_scene load_steps=7 format=3 uid="uid://coovnkllwwngj"]
 
 [ext_resource type="Texture2D" uid="uid://b80vg7nxx4ysq" path="res://Images/DokiKisserBG.png" id="1_63fvg"]
 [ext_resource type="PackedScene" uid="uid://hyo16tktxlkl" path="res://tomato_doki.tscn" id="2_ihldm"]
 [ext_resource type="PackedScene" uid="uid://c38qyf0owkae8" path="res://kiss_score.tscn" id="3_75ac5"]
 [ext_resource type="PackedScene" uid="uid://b0ofs80e2qe07" path="res://crowki.tscn" id="4_xq8gv"]
 [ext_resource type="Script" uid="uid://dc0por6ejdv08" path="res://doki_spawner.gd" id="6_syrn0"]
+[ext_resource type="PackedScene" uid="uid://b1wrb1pi0ly5u" path="res://pixel_doki.tscn" id="6_x62t2"]
 
 [node name="GameSpace" type="Node2D"]
 
@@ -16,4 +17,4 @@ texture = ExtResource("1_63fvg")
 
 [node name="DokiSpawner" type="Node2D" parent="."]
 script = ExtResource("6_syrn0")
-kiss_targets = Array[PackedScene]([ExtResource("2_ihldm"), ExtResource("4_xq8gv")])
+kiss_targets = Array[PackedScene]([ExtResource("2_ihldm"), ExtResource("4_xq8gv"), ExtResource("6_x62t2")])

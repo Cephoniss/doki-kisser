@@ -6,11 +6,12 @@
 
 [node name="DokiHeart" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_x4e2r")
-
 [node name="Area2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
 scale = Vector2(3.4, 3.19741)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_yrjpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.294118, 0.312753)
+texture = ExtResource("1_x4e2r")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1wrb1pi0ly5u"]
+
+[ext_resource type="Texture2D" uid="uid://d3qqytoglvb2n" path="res://Images/DokiBird.png" id="1_2ujst"]
+[ext_resource type="Script" uid="uid://l7qkdy5a4ia0" path="res://kissTarget.gd" id="1_fjalw"]
+[ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_ncxb1"]
+[ext_resource type="AudioStream" uid="uid://s2ngemb3u6rm" path="res://Audio/hotdog.wav" id="4_ein2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjalw"]
+
+[node name="PixelDoki" type="Node2D"]
+
+[node name="PixelDokiArea2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
+position = Vector2(-1, -6)
+scale = Vector2(3.6, 5.45527)
+script = ExtResource("1_fjalw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PixelDokiArea2D"]
+shape = SubResource("RectangleShape2D_fjalw")
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelDokiArea2D"]
+position = Vector2(0.277778, 1.09985)
+scale = Vector2(0.277778, 0.183309)
+texture = ExtResource("1_2ujst")
+
+[node name="KissEffect" type="Sprite2D" parent="PixelDokiArea2D"]
+visible = false
+position = Vector2(3.61111, 3.11625)
+scale = Vector2(0.15528, 0.157233)
+texture = ExtResource("3_ncxb1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PixelDokiArea2D"]
+stream = ExtResource("4_ein2b")

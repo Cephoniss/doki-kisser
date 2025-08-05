@@ -1,19 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0ofs80e2qe07"]
+[gd_scene load_steps=6 format=3 uid="uid://b0ofs80e2qe07"]
 
 [ext_resource type="Texture2D" uid="uid://d1h0hjrsmtr2s" path="res://Images/Crowki.png" id="1_h3076"]
 [ext_resource type="Script" uid="uid://s7dsh3d2etmi" path="res://area_2d.gd" id="1_imh4q"]
+[ext_resource type="AudioStream" uid="uid://s2ngemb3u6rm" path="res://Audio/hotdog.wav" id="3_bb0du"]
+[ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="4_mwyqr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_imh4q"]
 
 [node name="Crowki" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
+[node name="CrowkiArea2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
 scale = Vector2(6.44, 6.36)
 script = ExtResource("1_imh4q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrowkiArea2D"]
 shape = SubResource("RectangleShape2D_imh4q")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CrowkiArea2D"]
 scale = Vector2(0.15528, 0.157233)
 texture = ExtResource("1_h3076")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CrowkiArea2D"]
+stream = ExtResource("3_bb0du")
+
+[node name="KissEffect" type="Sprite2D" parent="CrowkiArea2D"]
+visible = false
+position = Vector2(-3.57143, -0.628931)
+scale = Vector2(0.15528, 0.157233)
+texture = ExtResource("4_mwyqr")
