@@ -1,16 +1,9 @@
 extends Node2D
 
 @export var kiss_targets: Array[PackedScene] = []
-
 @export var spawn_interval := 0.5
 var time_accumulator := 0.0
 
-func _process(delta: float) -> void:
-	time_accumulator += delta
-	if time_accumulator >= spawn_interval:
-		time_accumulator = 0.0
-		spawn_random_kiss_target()
-		
 func spawn_random_kiss_target():
 	if kiss_targets.is_empty():
 		return

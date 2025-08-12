@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://hyo16tktxlkl"]
+[gd_scene load_steps=7 format=3 uid="uid://hyo16tktxlkl"]
 
 [ext_resource type="Texture2D" uid="uid://ccec1ep0efg8a" path="res://Images/tomatoDoki.png" id="1_ausxj"]
+[ext_resource type="PackedScene" uid="uid://cp6rh2r0vmh1" path="res://long_goon.tscn" id="2_a7it7"]
 [ext_resource type="Script" uid="uid://l7qkdy5a4ia0" path="res://kissTarget.gd" id="2_sls2w"]
 [ext_resource type="AudioStream" uid="uid://s2ngemb3u6rm" path="res://Audio/hotdog.wav" id="3_chrkl"]
 [ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_k25wo"]
@@ -12,6 +13,7 @@
 [node name="Area2D" type="Area2D" parent="." groups=["KissScoreGroup"]]
 scale = Vector2(6.64, 6.44)
 script = ExtResource("2_sls2w")
+kiss_targets = Array[PackedScene]([ExtResource("2_a7it7")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_sls2w")

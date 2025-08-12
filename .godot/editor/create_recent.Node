@@ -1,5 +1,7 @@
-AudioStreamPlayer2D
+TextureProgressBar
 Sprite2D
+Timer
+AudioStreamPlayer2D
 CollisionShape2D
 Area2D
 Node2D
