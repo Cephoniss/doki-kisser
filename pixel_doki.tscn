@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://bktbtgckjbwgf" path="res://pixel_doki.gd" id="1_ein2b"]
 [ext_resource type="PackedScene" uid="uid://hyo16tktxlkl" path="res://tomato_doki.tscn" id="2_vckid"]
 [ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_ncxb1"]
-[ext_resource type="AudioStream" uid="uid://s2ngemb3u6rm" path="res://Audio/hotdog.wav" id="4_ein2b"]
 [ext_resource type="Texture2D" uid="uid://bur4k1cojvap5" path="res://Images/DokiBirdBlush.png" id="4_sb1vi"]
+[ext_resource type="AudioStream" uid="uid://cdg0guqlo2iam" path="res://Audio/hauayeah.ogg" id="6_sb1vi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjalw"]
 
@@ -38,6 +38,6 @@ scale = Vector2(0.15528, 0.157233)
 texture = ExtResource("3_ncxb1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PixelDokiArea2D"]
-stream = ExtResource("4_ein2b")
+stream = ExtResource("6_sb1vi")
 
 [node name="CooldownTimer" type="Timer" parent="."]

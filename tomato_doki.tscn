@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ccec1ep0efg8a" path="res://Images/tomatoDoki.png" id="1_ausxj"]
 [ext_resource type="PackedScene" uid="uid://cp6rh2r0vmh1" path="res://long_goon.tscn" id="2_a7it7"]
 [ext_resource type="Script" uid="uid://l7qkdy5a4ia0" path="res://kissTarget.gd" id="2_sls2w"]
-[ext_resource type="AudioStream" uid="uid://s2ngemb3u6rm" path="res://Audio/hotdog.wav" id="3_chrkl"]
 [ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_k25wo"]
+[ext_resource type="AudioStream" uid="uid://bbuswxao4l6y5" path="res://Audio/mintomuh.ogg" id="4_a7it7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sls2w"]
 
@@ -23,7 +23,7 @@ scale = Vector2(0.150602, 0.15528)
 texture = ExtResource("1_ausxj")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D"]
-stream = ExtResource("3_chrkl")
+stream = ExtResource("4_a7it7")
 
 [node name="KissEffect" type="Sprite2D" parent="Area2D"]
 visible = false

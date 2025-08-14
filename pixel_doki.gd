@@ -5,6 +5,7 @@ extends Area2D
 @export var cooldown_time: float = 4.0
 @onready var kiss_effect = $KissEffect
 @onready var blush_effect = $BlushSprite
+@onready var audio_player = $AudioStreamPlayer2D
 var on_cooldown := false
 
 signal doki_clicked(pos: Vector2)
@@ -21,6 +22,7 @@ func _on_input_event(viewport, event, shape_idx):
 		emit_signal("doki_clicked", global_position)
 		on_cooldown = true
 		$"../CooldownTimer".start()
+		audio_player.play()
 		show_kiss_effect()
 		for i in range(randi_range(2,4)):
 			spawn_random_targets()

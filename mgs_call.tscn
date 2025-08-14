@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc8whotifseum"]
+
+[ext_resource type="Texture2D" uid="uid://d4nk142yuvhhd" path="res://Images/mgsDoki.png" id="1_bkyod"]
+[ext_resource type="PackedScene" uid="uid://b0ofs80e2qe07" path="res://crowki.tscn" id="2_vl5qb"]
+[ext_resource type="PackedScene" uid="uid://333q7mlvfqqq" path="res://Minto.tscn" id="3_vl5qb"]
+[ext_resource type="Script" uid="uid://bylbojmo73yrt" path="res://messageBoxText.gd" id="4_7f2qo"]
+
+[node name="MGSCall" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_bkyod")
+
+[node name="Crowki" parent="." instance=ExtResource("2_vl5qb")]
+position = Vector2(1034, 267)
+scale = Vector2(1.8, 1.8)
+
+[node name="Node2D" parent="." instance=ExtResource("3_vl5qb")]
+position = Vector2(252, 255)
+scale = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 21.0
+offset_top = 533.0
+offset_right = 21.0
+offset_bottom = 533.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 234.0
+offset_top = -42.0
+offset_right = 945.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+script = ExtResource("4_7f2qo")
