@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ccec1ep0efg8a" path="res://Images/tomatoDoki.png" id="1_ausxj"]
 [ext_resource type="PackedScene" uid="uid://cp6rh2r0vmh1" path="res://long_goon.tscn" id="2_a7it7"]
-[ext_resource type="Script" uid="uid://l7qkdy5a4ia0" path="res://kissTarget.gd" id="2_sls2w"]
+[ext_resource type="Script" uid="uid://bq5h2dj1774cs" path="res://kissTarget.gd" id="2_sls2w"]
 [ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_k25wo"]
 [ext_resource type="AudioStream" uid="uid://bbuswxao4l6y5" path="res://Audio/mintomuh.ogg" id="4_a7it7"]
 

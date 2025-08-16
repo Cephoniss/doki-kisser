@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Doki-Kisser"
-run/main_scene="uid://cc8whotifseum"
+run/main_scene="uid://hbp3yuq3v7t1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BGM="*res://music_player.tscn"
 
 [display]
 

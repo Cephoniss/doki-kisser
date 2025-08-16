@@ -1,6 +1,6 @@
 extends TextureProgressBar
 
-var max_score: int = 1000
+var max_score: int = 3000
 var kiss_score_node
 
 func _ready():

@@ -28,7 +28,7 @@ func _on_input_event(viewport, event, shape_idx):
 		show_kiss_effect()
 		spawn_child()
 		remove_from_group("KissScoreGroup")
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.4).timeout
 		queue_free()
 
 func show_kiss_effect():

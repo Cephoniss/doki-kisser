@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d4nk142yuvhhd" path="res://Images/mgsDoki.png" id="1_bkyod"]
 [ext_resource type="PackedScene" uid="uid://b0ofs80e2qe07" path="res://crowki.tscn" id="2_vl5qb"]
 [ext_resource type="PackedScene" uid="uid://333q7mlvfqqq" path="res://Minto.tscn" id="3_vl5qb"]
-[ext_resource type="Script" uid="uid://bylbojmo73yrt" path="res://messageBoxText.gd" id="4_7f2qo"]
+[ext_resource type="Script" uid="uid://550racirktyq" path="res://messageBoxText.gd" id="4_7f2qo"]
 
 [node name="MGSCall" type="Node2D"]
 

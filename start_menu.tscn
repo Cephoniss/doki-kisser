@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://hbp3yuq3v7t1"]
+
+[ext_resource type="Texture2D" uid="uid://b80vg7nxx4ysq" path="res://Images/DokiKisserBG.png" id="1_ia0g5"]
+[ext_resource type="Texture2D" uid="uid://bmcacwaftryr2" path="res://Images/dokiKisserTitle.png" id="2_vpdu5"]
+[ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_v2mkm"]
+[ext_resource type="AudioStream" uid="uid://ckdpk0uykgxxu" path="res://Audio/AC_Bell_Ding_01.wav" id="4_ctwoq"]
+[ext_resource type="Script" uid="uid://dfqtgbq2wfm7j" path="res://menu_button.gd" id="4_v2mkm"]
+
+[node name="StartMenu" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 361)
+texture = ExtResource("1_ia0g5")
+
+[node name="DokiKisserTitle" type="Sprite2D" parent="."]
+position = Vector2(608, 288)
+scale = Vector2(3, 3)
+texture = ExtResource("2_vpdu5")
+
+[node name="MintKiss" type="Sprite2D" parent="."]
+position = Vector2(808, 336)
+rotation = -0.78652
+scale = Vector2(2, 2)
+texture = ExtResource("3_v2mkm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ctwoq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 424.0
+offset_right = 656.0
+offset_bottom = 464.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "PLAY"
+script = ExtResource("4_v2mkm")

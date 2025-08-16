@@ -3,9 +3,12 @@ extends Area2D
 
 @export var kiss_targets: Array[PackedScene] = []
 @export var cooldown_time: float = 4.0
+@export var audio_files:  Array[AudioStream] = []
 @onready var kiss_effect = $KissEffect
 @onready var blush_effect = $BlushSprite
 @onready var audio_player = $AudioStreamPlayer2D
+
+
 var on_cooldown := false
 
 signal doki_clicked(pos: Vector2)
@@ -22,9 +25,9 @@ func _on_input_event(viewport, event, shape_idx):
 		emit_signal("doki_clicked", global_position)
 		on_cooldown = true
 		$"../CooldownTimer".start()
-		audio_player.play()
+		play_random_audio()
 		show_kiss_effect()
-		for i in range(randi_range(2,4)):
+		for i in range(randi_range(1,3)):
 			spawn_random_targets()
 
 func _on_cooldown_timer_timeout():
@@ -37,6 +40,13 @@ func show_kiss_effect():
 	blush_effect.show()
 	var tween = create_tween()
 	tween.tween_property(kiss_effect, "modulate:a", 0.0, 1.0)
+	
+func play_random_audio():
+	if audio_files.is_empty():
+		return
+	var random_index = randi() % audio_files.size()
+	audio_player.stream = audio_files[random_index]
+	audio_player.play()
 
 func spawn_random_targets():
 	if kiss_targets.is_empty():

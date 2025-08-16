@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c38qyf0owkae8"]
 
-[ext_resource type="Script" uid="uid://c7vi32f0eng0s" path="res://kissScoreScript.gd" id="1_gqdet"]
+[ext_resource type="Script" uid="uid://dw6ygedu4l8jq" path="res://kissScoreScript.gd" id="1_gqdet"]
 
 [node name="KissScore" type="Node2D"]
 

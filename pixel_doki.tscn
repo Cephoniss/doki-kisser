@@ -1,11 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1wrb1pi0ly5u"]
+[gd_scene load_steps=13 format=3 uid="uid://b1wrb1pi0ly5u"]
 
 [ext_resource type="Texture2D" uid="uid://d3qqytoglvb2n" path="res://Images/DokiBird.png" id="1_2ujst"]
-[ext_resource type="Script" uid="uid://bktbtgckjbwgf" path="res://pixel_doki.gd" id="1_ein2b"]
+[ext_resource type="Script" uid="uid://ttrl04sorqlo" path="res://pixel_doki.gd" id="1_ein2b"]
 [ext_resource type="PackedScene" uid="uid://hyo16tktxlkl" path="res://tomato_doki.tscn" id="2_vckid"]
+[ext_resource type="AudioStream" uid="uid://s2ngemb3u6rm" path="res://Audio/hotdog.wav" id="3_nc46w"]
 [ext_resource type="Texture2D" uid="uid://bdb03mo6eka1g" path="res://Images/MintKiss.png" id="3_ncxb1"]
 [ext_resource type="Texture2D" uid="uid://bur4k1cojvap5" path="res://Images/DokiBirdBlush.png" id="4_sb1vi"]
+[ext_resource type="AudioStream" uid="uid://bbuswxao4l6y5" path="res://Audio/mintomuh.ogg" id="4_tqf3m"]
+[ext_resource type="AudioStream" uid="uid://bjjola8h13ojk" path="res://Audio/TimeToGetPreg.ogg" id="6_l2fxl"]
 [ext_resource type="AudioStream" uid="uid://cdg0guqlo2iam" path="res://Audio/hauayeah.ogg" id="6_sb1vi"]
+[ext_resource type="AudioStream" uid="uid://ct3axhsjguoq0" path="res://Audio/dokihehe.ogg" id="7_vi3d3"]
+[ext_resource type="AudioStream" uid="uid://deqtsnmy2aivi" path="res://Audio/AC_Accidental_Kiss_02v2.wav" id="8_vi3d3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjalw"]
 
@@ -16,6 +21,7 @@ position = Vector2(-1, -6)
 scale = Vector2(3.6, 5.45527)
 script = ExtResource("1_ein2b")
 kiss_targets = Array[PackedScene]([ExtResource("2_vckid")])
+audio_files = Array[AudioStream]([ExtResource("3_nc46w"), ExtResource("4_tqf3m"), ExtResource("6_sb1vi"), ExtResource("6_l2fxl"), ExtResource("7_vi3d3"), ExtResource("8_vi3d3")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PixelDokiArea2D"]
 shape = SubResource("RectangleShape2D_fjalw")

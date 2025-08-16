@@ -1,15 +1,16 @@
 extends Label
 
 
-@export var target_score: int = 1000
+@export var target_score: int = 3000
 @export var combo_reset_time: = 3.0
 @onready var game_timer = get_node("/root/GameSpace/GameTimer")
 @onready var doki = get_node("/root/GameSpace/PixelDoki/PixelDokiArea2D")
+var ComboPopup = preload("res://combo_score.tscn")
 var score: int = 0
 var base_score: int = 1
 var combo: int = 0
 var combo_timer: float = 0.0
-var ComboPopup = preload("res://combo_score.tscn")
+
 
 signal score_updated(new_score)
 
@@ -36,6 +37,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				break
 
 func _on_doki_clicked(pos: Vector2):
+	if score >= target_score:
+		return
+	
 	calculate_score(pos)
 
 func calculate_score(mouse_pos: Vector2):
@@ -49,6 +53,8 @@ func calculate_score(mouse_pos: Vector2):
 	show_combo_popup(mouse_pos)
 
 func show_combo_popup(pos: Vector2):
+	if score >= target_score:
+		return
 	var popup = ComboPopup.instantiate()
 	get_tree().current_scene.add_child(popup)
 	popup.global_position = pos
@@ -71,7 +77,7 @@ func _process(delta: float) -> void:
 func check_for_win_score():
 	if score >= target_score:
 		print("YOU WIN!")
-		# Add win method there
+		win_game()
 
 func update_combo():
 	if combo_timer <= combo_reset_time:
@@ -85,3 +91,6 @@ func combo_break():
 		score -= 10
 		print("Combo break!")
 		update_scoreboard()
+
+func win_game():
+	get_tree().change_scene_to_file("res://end_scene.tscn")
